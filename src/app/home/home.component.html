@@ -1,0 +1,26 @@
+<div class="buscador">
+  <nz-select nzMode="tags" style="width: 20%;" nzPlaceHolder="Buscar usuarios.." [(ngModel)]="listOfTagOptions" [nzLoading]="cargando" nzMode="multiple">
+    <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.name" [nzValue]="option"> </nz-option>
+  </nz-select>
+
+  <nz-table #basicTable [nzData]="listOfTagOptions">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Usuario</th>
+          <th>Email</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.name }}</td>
+          <td>{{ data.username }}</td>
+          <td>{{ data.email }}</td>
+          <td>
+            <a (click)="showDeleteConfirm(data.key)">Borrar</a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+</div>

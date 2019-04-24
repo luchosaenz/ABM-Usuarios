@@ -1,0 +1,12 @@
+<nz-page-header nzTitle="ABM Usuarios" nzSubtitle="Demo">
+    <nz-page-header-extra *ngIf='user'>
+        <nz-dropdown>
+            <a nz-dropdown> {{user}} <i nz-icon type="down"></i> </a>
+            <ul nz-menu nzSelectable>
+                <li nz-menu-item>
+                    <a (click)="cerrarSesion()">cerrar sesion</a>
+                </li>
+            </ul>
+        </nz-dropdown>
+    </nz-page-header-extra> 
+</nz-page-header>

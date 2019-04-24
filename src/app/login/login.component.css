@@ -1,0 +1,17 @@
+.login-form {
+    max-width: 300px;
+  }
+
+  .login-form-forgot {
+    float: right;
+  }
+
+  .login-form-button {
+    width: 100%;
+  }
+.fondo{
+    height: 80%;
+}
+nz-card{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
